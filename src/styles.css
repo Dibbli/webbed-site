@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+@source "./app/**/*.ts";
+@source "./app/**/*.html";
+@source "./*.html";
+
+@theme {
+  /* Gruvbox Dark Color Palette */
+  --color-bg0: #282828;
+  --color-bg1: #3c3836;
+  --color-bg2: #504945;
+  --color-bg3: #665c54;
+
+  --color-fg: #ebdbb2;
+  --color-fg-muted: #928374;
+
+  --color-accent: #d79921;
+  --color-accent-bright: #fabd2f;
+  --color-orange: #d65d0e;
+  --color-orange-bright: #fe8019;
+  --color-red: #cc241d;
+  --color-green: #98971a;
+  --color-aqua: #689d6a;
+  --color-blue: #458588;
+  --color-purple: #b16286;
+
+  /* Font family */
+  --font-mono: 'CommitMono Nerd Font', 'CommitMono', ui-monospace, 'Cascadia Code',
+    'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+/* CommitMono Nerd Font - loaded from assets */
+@font-face {
+  font-family: 'CommitMono Nerd Font';
+  src: url('/assets/fonts/CommitMonoNerdFont-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CommitMono Nerd Font';
+  src: url('/assets/fonts/CommitMonoNerdFont-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Shared Components */
+@layer components {
+  .btn-primary {
+    @apply flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 text-accent transition-colors hover:bg-accent hover:text-bg0;
+  }
+
+  .btn-secondary {
+    @apply flex items-center gap-2 rounded-lg border border-bg2 bg-bg1 px-4 py-2 text-fg transition-colors hover:border-accent hover:text-accent;
+  }
+
+  .section {
+    @apply px-4 py-12 md:px-6 md:py-20;
+  }
+
+  .section-title {
+    @apply mb-8 text-center font-bold text-fg;
+  }
+
+  .card {
+    @apply rounded-lg border border-bg2 bg-bg1 p-4 sm:p-6;
+  }
+
+  .tech-badge {
+    @apply rounded bg-bg2 px-2 py-1 text-sm text-fg;
+  }
+
+  .nav-link {
+    @apply block py-2 text-sm md:text-base text-fg hover:text-accent transition-colors;
+  }
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg0);
+  color: var(--color-fg);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg0);
+}
+
+/* Focus styling */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-fg-muted);
+}

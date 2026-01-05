@@ -1,0 +1,8 @@
+dist/
+.angular/
+.nx/
+coverage/
+node_modules/
+*.log
+*.tsbuildinfo
+.env*
