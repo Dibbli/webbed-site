@@ -1,10 +1,8 @@
 # webbed-site
 
-Personal portfolio / CV site built with Angular 21, Tailwind CSS 4, and Phosphor Icons.
+Personal portfolio site built with Angular 21, Tailwind CSS 4, and Phosphor Icons.
 
-## Commit history
-
-Squashed into a single commit on purpose.
+Squashed into a single commit before going public, so excuse the lack of git history.
 
 ## Getting started
 
