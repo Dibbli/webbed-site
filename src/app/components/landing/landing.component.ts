@@ -33,15 +33,6 @@ import { IconLinkComponent } from '../icon-link/icon-link.component';
             [external]="false"
             ariaLabel="Email"
           />
-          <app-icon-link
-            href="/botond-mezei-cv.pdf"
-            icon="file-arrow-down"
-            label="CV"
-            variant="secondary"
-            [external]="false"
-            [download]="true"
-            ariaLabel="Download CV"
-          />
         </div>
       </div>
       <div class="mt-8 sm:mt-16 animate-bounce">

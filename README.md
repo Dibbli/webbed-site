@@ -2,13 +2,9 @@
 
 Personal portfolio / CV site built with Angular 21, Tailwind CSS 4, and Phosphor Icons.
 
-## Stack
+## Commit history
 
-- **Angular 21** (standalone components, signals, zoneless)
-- **Tailwind CSS 4** with a Gruvbox Dark palette
-- **Nx** for build tooling
-- **Phosphor Icons** via CDN
-- **CommitMono Nerd Font**
+Squashed into a single commit on purpose.
 
 ## Getting started
 
